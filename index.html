@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부트스트랩 페이지</title>
+    <!-- 부트스트랩 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 부트스트랩 아이콘 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- 네비게이션 바 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">로고</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">홈</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">서비스</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">문의하기</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 메인 컨텐츠 -->
+    <div class="container my-5">
+        <!-- 메인 카테고리 -->
+        <div class="row g-4">
+            <!-- 업무 카테고리 -->
+            <div class="col-md-4">
+                <div class="card h-100" data-bs-toggle="modal" data-bs-target="#workModal" style="cursor: pointer;">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">업무</h3>
+                        <i class="bi bi-briefcase fs-1"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- 교육 카테고리 -->
+            <div class="col-md-4">
+                <div class="card h-100" data-bs-toggle="modal" data-bs-target="#educationModal" style="cursor: pointer;">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">교육</h3>
+                        <i class="bi bi-book fs-1"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- 취미 카테고리 -->
+            <div class="col-md-4">
+                <div class="card h-100" data-bs-toggle="modal" data-bs-target="#hobbyModal" style="cursor: pointer;">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">취미</h3>
+                        <i class="bi bi-palette fs-1"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- 가족 카테고리 -->
+            <div class="col-md-4">
+                <div class="card h-100" data-bs-toggle="modal" data-bs-target="#familyModal" style="cursor: pointer;">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">가족</h3>
+                        <i class="bi bi-people fs-1"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- 선교 카테고리 -->
+            <div class="col-md-4">
+                <div class="card h-100" data-bs-toggle="modal" data-bs-target="#missionModal" style="cursor: pointer;">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">선교</h3>
+                        <i class="bi bi-globe fs-1"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- 기타 카테고리 -->
+            <div class="col-md-4">
+                <div class="card h-100" data-bs-toggle="modal" data-bs-target="#etcModal" style="cursor: pointer;">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">기타</h3>
+                        <i class="bi bi-three-dots fs-1"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 업무 모달 -->
+        <div class="modal fade" id="workModal" tabindex="-1">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">업무 관련 링크</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row g-3">
+                            <div class="col-md-3">
+                                <a href="https://example1.com" class="btn btn-outline-primary w-100 h-100 py-4">메일</a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="https://example2.com" class="btn btn-outline-primary w-100 h-100 py-4">결재</a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="https://example3.com" class="btn btn-outline-primary w-100 h-100 py-4">일정</a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="https://example4.com" class="btn btn-outline-primary w-100 h-100 py-4">업무관리</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 나머지 모달들 (교육, 취미, 가족, 선교, 기타) -->
+        <!-- 각 모달의 구조는 업무 모달과 동일하며, id와 내용만 변경 -->
+    </div>
+
+    <!-- 푸터 -->
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>회사 정보</h5>
+                    <p>주소: 서울특별시 강남구 테헤란로</p>
+                    <p>전화: 02-1234-5678</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <h5>SNS</h5>
+                    <a href="#" class="text-light me-3">Facebook</a>
+                    <a href="#" class="text-light me-3">Twitter</a>
+                    <a href="#" class="text-light">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 부트스트랩 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
