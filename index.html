@@ -3,117 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>부트스트랩 페이지</title>
-    <!-- 부트스트랩 CSS -->
+    <title>업무관리</title>
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- 부트스트랩 아이콘 CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <!-- FontAwesome 아이콘 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- 커스텀 벤토 CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <!-- 네비게이션 바 -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">로고</a>
+<body class="bg-light text-dark">
+
+    <!-- 네비게이션바 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 border-bottom shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold text-primary" href="#">로고</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">홈</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">서비스</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">문의하기</a>
-                    </li>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="#">홈</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">서비스</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">문의하기</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- 메인 컨텐츠 -->
-    <div class="container my-5">
-        <!-- 메인 카테고리 -->
-        <div class="row g-4">
-            <!-- 업무 카테고리 -->
-            <div class="col-md-4">
-                <div class="card h-100" data-bs-toggle="modal" data-bs-target="#workModal" style="cursor: pointer;">
-                    <div class="card-body text-center">
-                        <h3 class="card-title">업무</h3>
-                        <i class="bi bi-briefcase fs-1"></i>
+    <!-- 벤토 그리드 메인 섹션 -->
+    <main class="container py-5">
+        <div class="bento-grid">
+            <!-- 업무 -->
+            <div class="bento-card bento-large pastel-blue" data-bs-toggle="modal" data-bs-target="#workModal" style="cursor: pointer;">
+                <div class="card-content">
+                    <i class="fa-solid fa-briefcase fa-2x mb-3 text-primary"></i>
+                    <h3>업무</h3>
+                    <p class="text-muted">핵심 업무 및 프로젝트 관리 영역입니다.</p>
+                </div>
+            </div>
+
+            <!-- 교육 -->
+            <div class="bento-card pastel-pink" data-bs-toggle="modal" data-bs-target="#educationModal" style="cursor: pointer;">
+                <div class="card-content">
+                    <i class="fa-solid fa-graduation-cap fa-xl mb-2 text-danger"></i>
+                    <h4>교육</h4>
+                </div>
+            </div>
+
+            <!-- 취미 -->
+            <div class="bento-card pastel-yellow" data-bs-toggle="modal" data-bs-target="#hobbyModal" style="cursor: pointer;">
+                <div class="card-content">
+                    <i class="fa-solid fa-gamepad fa-xl mb-2 text-warning"></i>
+                    <h4>취미</h4>
+                </div>
+            </div>
+
+            <!-- 가족 -->
+            <div class="bento-card pastel-green" data-bs-toggle="modal" data-bs-target="#familyModal" style="cursor: pointer;">
+                <div class="card-content">
+                    <i class="fa-solid fa-users fa-xl mb-2 text-success"></i>
+                    <h4>가족</h4>
+                </div>
+            </div>
+
+            <!-- 선교 -->
+            <div class="bento-card bento-wide pastel-purple" data-bs-toggle="modal" data-bs-target="#missionModal" style="cursor: pointer;">
+                <div class="card-content d-flex flex-column flex-md-row justify-content-between align-items-md-center">
+                    <div class="mb-3 mb-md-0">
+                        <i class="fa-solid fa-globe fa-xl mb-2 text-info"></i>
+                        <h4>선교</h4>
+                        <p class="text-muted mb-0">선교 관련 활동 및 정보 모음</p>
+                    </div>
+                    <div class="links-group">
+                        <a href="https://bong892.github.io/mission/" class="btn btn-sm btn-outline-dark me-1" onclick="event.stopPropagation();">선교회</a>
+                        <a href="https://example2.com" class="btn btn-sm btn-outline-dark me-1" onclick="event.stopPropagation();">결재</a>
+                        <a href="https://example3.com" class="btn btn-sm btn-outline-dark me-1" onclick="event.stopPropagation();">일정</a>
+                        <a href="https://example4.com" class="btn btn-sm btn-dark text-white" onclick="event.stopPropagation();">업무관리</a>
                     </div>
                 </div>
             </div>
-            <!-- 교육 카테고리 -->
-            <div class="col-md-4">
-                <div class="card h-100" data-bs-toggle="modal" data-bs-target="#educationModal" style="cursor: pointer;">
-                    <div class="card-body text-center">
-                        <h3 class="card-title">교육</h3>
-                        <i class="bi bi-book fs-1"></i>
-                    </div>
-                </div>
-            </div>
-            <!-- 취미 카테고리 -->
-            <div class="col-md-4">
-                <div class="card h-100" data-bs-toggle="modal" data-bs-target="#hobbyModal" style="cursor: pointer;">
-                    <div class="card-body text-center">
-                        <h3 class="card-title">취미</h3>
-                        <i class="bi bi-palette fs-1"></i>
-                    </div>
-                </div>
-            </div>
-            <!-- 가족 카테고리 -->
-            <div class="col-md-4">
-                <div class="card h-100" data-bs-toggle="modal" data-bs-target="#familyModal" style="cursor: pointer;">
-                    <div class="card-body text-center">
-                        <h3 class="card-title">가족</h3>
-                        <i class="bi bi-people fs-1"></i>
-                    </div>
-                </div>
-            </div>
-            <!-- 선교 카테고리 -->
-            <div class="col-md-4">
-                <div class="card h-100" data-bs-toggle="modal" data-bs-target="#missionModal" style="cursor: pointer;">
-                    <div class="card-body text-center">
-                        <h3 class="card-title">선교</h3>
-                        <i class="bi bi-globe fs-1"></i>
-                    </div>
-                </div>
-            </div>
-            <!-- 기타 카테고리 -->
-            <div class="col-md-4">
-                <div class="card h-100" data-bs-toggle="modal" data-bs-target="#etcModal" style="cursor: pointer;">
-                    <div class="card-body text-center">
-                        <h3 class="card-title">기타</h3>
-                        <i class="bi bi-three-dots fs-1"></i>
-                    </div>
+
+            <!-- 기타 -->
+            <div class="bento-card pastel-gray" data-bs-toggle="modal" data-bs-target="#etcModal" style="cursor: pointer;">
+                <div class="card-content">
+                    <i class="fa-solid fa-ellipsis fa-xl mb-2 text-secondary"></i>
+                    <h4>기타</h4>
                 </div>
             </div>
         </div>
 
         <!-- 업무 모달 -->
-        <div class="modal fade" id="missionModal" tabindex="-1">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">선교 관련 링크</h5>
+        <div class="modal fade" id="workModal" tabindex="-1">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content" style="border-radius: 24px; border: none;">
+                    <div class="modal-header border-0">
+                        <h5 class="modal-title fw-bold">업무 관련 링크</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body pt-0">
                         <div class="row g-3">
                             <div class="col-md-3">
-                                <a href="https://bong892.github.io/mission/" class="btn btn-outline-primary w-100 h-100 py-4">선교회</a>
+                                <a href="https://example1.com" class="btn btn-outline-primary w-100 h-100 py-4" style="border-radius: 16px;">메일</a>
                             </div>
                             <div class="col-md-3">
-                                <a href="https://example2.com" class="btn btn-outline-primary w-100 h-100 py-4">결재</a>
+                                <a href="https://example2.com" class="btn btn-outline-primary w-100 h-100 py-4" style="border-radius: 16px;">결재</a>
                             </div>
                             <div class="col-md-3">
-                                <a href="https://example3.com" class="btn btn-outline-primary w-100 h-100 py-4">일정</a>
+                                <a href="https://example3.com" class="btn btn-outline-primary w-100 h-100 py-4" style="border-radius: 16px;">일정</a>
                             </div>
                             <div class="col-md-3">
-                                <a href="https://example4.com" class="btn btn-outline-primary w-100 h-100 py-4">업무관리</a>
+                                <a href="https://example4.com" class="btn btn-outline-primary w-100 h-100 py-4" style="border-radius: 16px;">업무관리</a>
                             </div>
                         </div>
                     </div>
@@ -121,56 +120,166 @@
             </div>
         </div>
 
-        <!-- 나머지 모달들 (교육, 취미, 가족, 선교, 기타) -->
-        <div class="modal fade" id="workModal" tabindex="-1">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">업무 관련 링크</h5>
+        <!-- 교육 모달 -->
+        <div class="modal fade" id="educationModal" tabindex="-1">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content" style="border-radius: 24px; border: none;">
+                    <div class="modal-header border-0">
+                        <h5 class="modal-title fw-bold">교육 관련 링크</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body pt-0">
                         <div class="row g-3">
                             <div class="col-md-3">
-                                <a href="https://example1.com" class="btn btn-outline-primary w-100 h-100 py-4">메일</a>
+                                <a href="https://example1.com" class="btn btn-outline-primary w-100 h-100 py-4" style="border-radius: 16px;">강의</a>
                             </div>
                             <div class="col-md-3">
-                                <a href="https://example2.com" class="btn btn-outline-primary w-100 h-100 py-4">결재</a>
+                                <a href="https://example2.com" class="btn btn-outline-primary w-100 h-100 py-4" style="border-radius: 16px;">자료</a>
                             </div>
                             <div class="col-md-3">
-                                <a href="https://example3.com" class="btn btn-outline-primary w-100 h-100 py-4">일정</a>
+                                <a href="https://example3.com" class="btn btn-outline-primary w-100 h-100 py-4" style="border-radius: 16px;">일정</a>
                             </div>
                             <div class="col-md-3">
-                                <a href="https://example4.com" class="btn btn-outline-primary w-100 h-100 py-4">업무관리</a>
+                                <a href="https://example4.com" class="btn btn-outline-primary w-100 h-100 py-4" style="border-radius: 16px;">수강관리</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- 각 모달의 구조는 업무 모달과 동일하며, id와 내용만 변경 -->
-    </div>
+
+        <!-- 취미 모달 -->
+        <div class="modal fade" id="hobbyModal" tabindex="-1">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content" style="border-radius: 24px; border: none;">
+                    <div class="modal-header border-0">
+                        <h5 class="modal-title fw-bold">취미 관련 링크</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body pt-0">
+                        <div class="row g-3">
+                            <div class="col-md-3">
+                                <a href="https://example1.com" class="btn btn-outline-primary w-100 h-100 py-4" style="border-radius: 16px;">음악</a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="https://example2.com" class="btn btn-outline-primary w-100 h-100 py-4" style="border-radius: 16px;">운동</a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="https://example3.com" class="btn btn-outline-primary w-100 h-100 py-4" style="border-radius: 16px;">여행</a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="https://example4.com" class="btn btn-outline-primary w-100 h-100 py-4" style="border-radius: 16px;">독서</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 가족 모달 -->
+        <div class="modal fade" id="familyModal" tabindex="-1">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content" style="border-radius: 24px; border: none;">
+                    <div class="modal-header border-0">
+                        <h5 class="modal-title fw-bold">가족 관련 링크</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body pt-0">
+                        <div class="row g-3">
+                            <div class="col-md-3">
+                                <a href="https://example1.com" class="btn btn-outline-primary w-100 h-100 py-4" style="border-radius: 16px;">앨범</a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="https://example2.com" class="btn btn-outline-primary w-100 h-100 py-4" style="border-radius: 16px;">일정</a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="https://example3.com" class="btn btn-outline-primary w-100 h-100 py-4" style="border-radius: 16px;">연락처</a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="https://example4.com" class="btn btn-outline-primary w-100 h-100 py-4" style="border-radius: 16px;">가계부</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 선교 모달 -->
+        <div class="modal fade" id="missionModal" tabindex="-1">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content" style="border-radius: 24px; border: none;">
+                    <div class="modal-header border-0">
+                        <h5 class="modal-title fw-bold">선교 관련 링크</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body pt-0">
+                        <div class="row g-3">
+                            <div class="col-md-3">
+                                <a href="https://bong892.github.io/mission/" class="btn btn-outline-primary w-100 h-100 py-4" style="border-radius: 16px;">선교회</a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="https://example2.com" class="btn btn-outline-primary w-100 h-100 py-4" style="border-radius: 16px;">결재</a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="https://example3.com" class="btn btn-outline-primary w-100 h-100 py-4" style="border-radius: 16px;">일정</a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="https://example4.com" class="btn btn-outline-primary w-100 h-100 py-4" style="border-radius: 16px;">업무관리</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 기타 모달 -->
+        <div class="modal fade" id="etcModal" tabindex="-1">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content" style="border-radius: 24px; border: none;">
+                    <div class="modal-header border-0">
+                        <h5 class="modal-title fw-bold">기타 관련 링크</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body pt-0">
+                        <div class="row g-3">
+                            <div class="col-md-3">
+                                <a href="https://example1.com" class="btn btn-outline-primary w-100 h-100 py-4" style="border-radius: 16px;">메모</a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="https://example2.com" class="btn btn-outline-primary w-100 h-100 py-4" style="border-radius: 16px;">설정</a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="https://example3.com" class="btn btn-outline-primary w-100 h-100 py-4" style="border-radius: 16px;">도움말</a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="https://example4.com" class="btn btn-outline-primary w-100 h-100 py-4" style="border-radius: 16px;">문의</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 
     <!-- 푸터 -->
-    <footer class="bg-dark text-light py-4 mt-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h5>회사 정보</h5>
-                    <p>주소: 서울특별시 강남구 테헤란로</p>
-                    <p>전화: 02-1234-5678</p>
-                </div>
-                <div class="col-md-6 text-md-end">
-                    <h5>SNS</h5>
-                    <a href="#" class="text-light me-3">Facebook</a>
-                    <a href="#" class="text-light me-3">Twitter</a>
-                    <a href="#" class="text-light">Instagram</a>
+    <footer class="bg-white text-muted py-4 border-top px-4 shadow-sm">
+        <div class="container-fluid d-flex flex-column flex-md-row justify-content-between align-items-center">
+            <div>
+                <h6 class="text-dark fw-bold">회사 정보</h6>
+                <p class="mb-1">주소: 서울특별시 강남구 테헤란로</p>
+                <p class="mb-0">전화: 02-1234-5678</p>
+            </div>
+            <div class="mt-3 mt-md-0">
+                <h6 class="text-dark fw-bold text-md-end">SNS</h6>
+                <div>
+                    <a href="#" class="text-muted text-decoration-none me-3">Facebook</a>
+                    <a href="#" class="text-muted text-decoration-none me-3">Twitter</a>
+                    <a href="#" class="text-muted text-decoration-none">Instagram</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- 부트스트랩 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
